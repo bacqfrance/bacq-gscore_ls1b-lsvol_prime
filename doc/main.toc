@@ -1,0 +1,25 @@
+\contentsline {chapter}{\numberline {1}QPU Abstraction Framework for benchmarking}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Overall Architecture}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}BaseAbstractClass}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Base principle and implementation}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}The \texttt {capabilitySet} list}{5}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}The \texttt {qpuDispatch} dictionary}{6}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}QPUBenchContext}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Concrete QPU Classes}{7}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Implementation contract}{7}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Typical file layout for one QPU}{7}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Four-Step Instantiation Protocol}{9}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Separation of Generic versus Specific Code}{9}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Summary}{11}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Short How-to: building a new support for a QPU}{11}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Header}{12}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Backend functions}{12}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Concrete class implementation}{13}{subsection.1.8.3}%
+\contentsline {subsection}{\numberline {1.8.4}Hardware-Independent Sample Representation}{14}{subsection.1.8.4}%
+\contentsline {section}{\numberline {1.A}BACQ Benchmark}{14}{section.1.1}%
+\contentsline {subsection}{\numberline {1.A.1}📋 Prerequisites}{15}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.A.2}🚀 Installation}{15}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.A.3}Basic unitary tests}{15}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.A.4}Usage}{15}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.A.5}To do}{16}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.B}Doxygen documentation}{16}{section.1.2}%

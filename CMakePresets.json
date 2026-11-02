@@ -1,0 +1,31 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Debug with OpenMP",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "WITH_OPENMP": true
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release with OpenMP",
+      "inherits": "default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "no-openmp",
+      "displayName": "Without OpenMP",
+      "inherits": "default",
+      "cacheVariables": {
+        "WITH_OPENMP": false
+      }
+    }
+  ]
+}

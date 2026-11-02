@@ -1,0 +1,141 @@
+\section{BACQ Benchmark}\label{bacq-benchmark}
+
+Implements the framework of the BACQ Benchmark suite in a plateform
+independent way. At the moment, it provides supports for the following
+QPUs:
+
+\begin{itemize}
+\tightlist
+\item
+  Generic CPU (for reference)
+\item
+  Dwave
+\item
+  (TBA) Pasqal (Ruby machine from Genci)
+\end{itemize}
+
+And the following scores:
+
+\begin{itemize}
+\tightlist
+\item
+  G-Score (Evaluation of Quantum Optimization heuristics)
+\item
+  Lin2Score (Evaluation of capability for linear system solving in
+  binary)
+\end{itemize}
+
+\subsection{📋 Prerequisites}\label{prerequisites}
+
+\begin{itemize}
+\tightlist
+\item
+  Python \textgreater= 3.10
+\item
+  CMake \textgreater= 3.18
+\item
+  Compilateur C++ (GCC/Clang)
+\item
+  Doxygen
+\item
+  Compilateur Latex (pdflatex)
+\item
+  Pandoc
+\end{itemize}
+
+\subsection{🚀 Installation}\label{installation}
+
+\begin{itemize}
+\tightlist
+\item
+  Build \& install
+\end{itemize}
+
+\begin{lstlisting}[language=bash]
+git clone [https://github.com/utilisateur/mon-projet.git](https://github.com/utilisateur/mon-projet.git)
+cd BacqBench
+mkdir build && cd build
+cmake ..
+make
+\end{lstlisting}
+
+\begin{itemize}
+\tightlist
+\item
+  Installation as python package (necessary for use with QPUs)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    inside the main directory ``cd ..'' if required
+  \item
+    activate your current QPU environement (e.g.~DWave Ocean, Pasqal
+    Pulser)
+  \item
+    install benchmark package using ``pip install -e .''
+  \item
+    N.B. you can do it after runing the tests (see below) Installing in
+    the support environement of your QPU is necessary to run the QPU
+    backend of the benchmark suite.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Basic unitary tests}\label{basic-unitary-tests}
+
+\begin{lstlisting}[language=bash]
+make check 
+\end{lstlisting}
+
+This provides several unitary tests. Not all are implemented yet.
+
+\subsection{Usage}\label{usage}
+
+The main python script is BACQBenchmark at the root of the project The
+minimum parameter is the target QPU (or CPU comparison) E.g.
+
+\begin{lstlisting}[language=bash]
+python3 BACQBenchmak dwave 
+\end{lstlisting}
+
+Will launch the G-Score evaluation on the default architecture of DWave
+(Advantage/Pegasus ATM). It is worth noting that this requires the
+BACQBenchmak to be installed as package in the QPU environement. If it
+is not the case, the main program would display ``Backend XXX not
+available''
+
+E.g.
+
+\begin{lstlisting}[language=bash]
+python3 BACQBenchmak cpu 
+\end{lstlisting}
+
+To run the G-Score on Simulated Annealing (CPU backend)
+
+Use
+
+\begin{lstlisting}[language=bash]
+python3 BACQBenchmak -h
+\end{lstlisting}
+
+or
+
+\begin{lstlisting}[language=bash]
+python3 BACQBenchmak --help 
+\end{lstlisting}
+
+To be provided with usage. Each backend should provide its own help, but
+in this case it is necessary to provide the backend on the command line
+
+Being Alpha release, all options may not be implemented yet
+
+\subsection{To do}\label{to-do}
+
+Here is a preliminary of pending functionalities:
+
+\begin{itemize}
+\tightlist
+\item
+  Saving log in json
+\item
+  Evaluation of benchmark from json results file
+\end{itemize}

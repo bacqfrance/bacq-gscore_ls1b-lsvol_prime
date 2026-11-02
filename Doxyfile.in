@@ -1,0 +1,41 @@
+# --- General info ---
+PROJECT_NAME           = "@CMAKE_PROJECT_NAME@"
+OUTPUT_DIRECTORY       = "@CMAKE_CURRENT_BINARY_DIR@/doc"
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = "@CMAKE_SOURCE_DIR@"
+
+# --- Files to be included for Doxygen parsing ---
+INPUT                  = "@CMAKE_CURRENT_SOURCE_DIR@"
+FILE_PATTERNS          = *.cpp *.hpp *.h *.py
+RECURSIVE              = YES
+
+# --- Preprocessing filter for Python and C++ ---
+FILTER_PATTERNS        = *.py="@PYTHON_EXECUTABLE@ @CMAKE_CURRENT_SOURCE_DIR@/scripts/doxy_filter.py" \
+                         *.cpp="@PYTHON_EXECUTABLE@ @CMAKE_CURRENT_SOURCE_DIR@/scripts/doxy_filter.py" \
+                         *.hpp="@PYTHON_EXECUTABLE@ @CMAKE_CURRENT_SOURCE_DIR@/scripts/doxy_filter.py" \
+                         *.h="@PYTHON_EXECUTABLE@ @CMAKE_CURRENT_SOURCE_DIR@/scripts/doxy_filter.py"
+
+# --- Extract documentation ---
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# --- Output formats ---
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+
+# --- LaTeX / pdflatex configuration ---
+LATEX_OUTPUT           = latex
+LATEX_CMD_NAME         = pdflatex
+COMPACT_LATEX          = NO
+PAPER_TYPE             = a4
+USE_PDFLATEX           = YES
+ENABLE_PREPROCESSING   = YES
+
+# --- Exclude temporary, build, and script files ---
+EXCLUDE_PATTERNS       = */build/* \
+                         */CMakeFiles/* \
+                         */CMakeTmp/* \
+                         */scripts/* \
+                         CMakeCXXCompilerId.cpp \
+                         CMakeCCompilerId.cpp

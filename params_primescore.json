@@ -1,0 +1,7 @@
+{
+    "Ns": [91,105],
+    "size": [3,4],
+    "Method_input": "flux_biases",  
+	"Flux_biases_empirical_strength" : 1000,
+	"Chain_strength": 2
+}
